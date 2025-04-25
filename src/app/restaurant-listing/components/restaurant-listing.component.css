@@ -1,0 +1,255 @@
+
+.my-gap {
+    margin-top: 20px;
+  }
+  .restaurant-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(250px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  .restaurant-card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+  
+    .restaurant-image {
+      height: 200px;
+      overflow: hidden;
+    }
+  
+    .restaurant-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  
+    .restaurant-details {
+      padding: 20px;
+    }
+  
+    .restaurant-name {
+      font-size: 20px;
+      margin: 0;
+    }
+  
+    .restaurant-rating {
+      margin: 10px 0;
+    }
+  
+    .rating {
+      font-weight: bold;
+      margin-right: 5px;
+    }
+  
+    .star {
+      color: orange;
+    }
+  
+    .order-btn {
+      background-color: #00a7e1;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 10px;
+      transition: background-color 0.3s ease;
+      width: 100%;
+    }
+  
+    .order-btn:hover {
+      background-color: #0093c6;
+    }
+  
+  
+    .header {
+      background-color: #00A7E1;
+      color: #fff;
+      padding: 20px 0;
+    }
+    
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .header-logo {
+      font-size: 36px;
+      font-weight: bold;
+      margin: 0;
+    }
+    
+    .header-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    
+    .header-nav li {
+      margin-right: 20px;
+    }
+    
+    .header-nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    
+    .header-nav a:hover {
+      color: #E7F9FF;
+    }
+    
+    @media only screen and (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        text-align: center;
+      }
+    
+      .header-nav {
+        margin-top: 20px;
+      }
+    
+      .header-nav ul {
+        display: block;
+      }
+    
+      .header-nav li {
+        margin: 10px 0;
+      }
+    }
+    /* 1 ▸  FONTS  ─────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500&display=swap');
+
+:root {
+  /* Brand palette  */
+  --clr-charcoal: #1B1B1B;       /* header / text on gold */
+  --clr-gold:     #D4AF37;       /* accent */
+  --clr-gold-light:#F0C75E;      /* hover tint */
+  --radius-lg: 12px;             /* card / button rounding */
+  --elev-card: 0 2px 8px rgba(0,0,0,.12);
+  --elev-card-hover: 0 6px 14px rgba(0,0,0,.18);
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  color:#333;
+}
+
+/* 2 ▸  HEADER  (re‑iterated so palette hooks in) */
+.header{
+  background:var(--clr-charcoal);
+  box-shadow:0 2px 6px rgba(0,0,0,.4);
+}
+.header-logo{
+  font-family:'Playfair Display',serif;
+  color:#FFF;
+}
+.header-nav .username{
+  color:#FFF;
+}
+
+/* 3 ▸  CARD ELEVATION & IMAGE HOVER  */
+.restaurant-card{
+  background:#FFF;
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+  box-shadow:var(--elev-card);
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.restaurant-card:hover{
+  transform:translateY(-4px);
+  box-shadow:var(--elev-card-hover);
+}
+.restaurant-image img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  transition:transform .4s ease;
+}
+.restaurant-card:hover .restaurant-image img{
+  transform:scale(1.06);
+}
+
+/* 4 ▸  STAR ACCENT  */
+.restaurant-rating .fa-star{ color:var(--clr-gold); }
+
+/* 5 ▸  ORDER BUTTON  */
+.order-btn{
+  display:block;
+  width:100%;
+  margin-top:1rem;
+  padding:.75rem 0;
+  background:var(--clr-gold);
+  color:var(--clr-charcoal);
+  font-weight:600;
+  font-size:1rem;
+  letter-spacing:.5px;
+  text-transform:uppercase;
+  border:none;
+  border-radius:var(--radius-lg);
+  cursor:pointer;
+  box-shadow:0 4px 6px rgba(0,0,0,.15);
+  transition:all .25s ease;
+}
+.order-btn:hover{
+  background:var(--clr-gold-light);
+  box-shadow:0 10px 122px rgb(19, 10, 59);
+  transform:translateY(-2px);
+}
+.order-btn:active{
+  transform:translateY(0);
+  box-shadow:0 3px 5px rgba(0,0,0,.2);
+}
+
+.restaurant-name{ font-family:'Playfair Display',serif; }
+
+/* ───────── luxe CTA button ───────── */
+.order-btn{
+  width:100%;
+  padding:.85rem 0;
+  font-family:'Poppins',sans-serif;
+  font-weight:600;
+  font-size:1rem;
+  letter-spacing:.6px;
+  text-transform:uppercase;
+
+  /* metallic gold gradient */
+  background:linear-gradient(135deg,#F1D48F 0%, #D4AF37 100%);
+  color:#1B1B1B;                  /* dark text for contrast */
+
+  border:none;
+  border-radius:12px;             /* same curve as cards */
+  cursor:pointer;
+
+  box-shadow:0 4px 6px rgba(0,0,0,.15);
+  transition:transform .25s cubic-bezier(.22,1,.36,1),
+             box-shadow .25s ease;
+}
+
+/* lift & deepen shadow on hover */
+.order-btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 14px rgba(0,0,0,.25);
+}
+
+/* subtle press‑in on click */
+.order-btn:active{
+  transform:translateY(0);
+  box-shadow:0 4px 6px rgba(0,0,0,.20);
+}
+
+/* keyboard‑friendly focus */
+.order-btn:focus-visible{
+  outline:2px solid #D4AF37;
+  outline-offset:3px;
+}

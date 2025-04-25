@@ -1,0 +1,65 @@
+.user-avatar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-avatar img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+  
+  .username {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .header {
+    background-color: rgb(254, 254, 254);
+  }
+
+  
+  
+/* Header container */
+.header {
+     /* Charcoal */
+  box-shadow: 0 2px 6px rgba(0,0,0,.4); /* Subtle depth */
+}
+
+/* Main logo text */
+.header-logo {
+  color: #F8F8F8;                 /* Almost‑white */
+}
+
+/* Avatar username text */
+.header-nav .username {
+  color: #F8F8F8;
+}
+
+/* If you have header buttons/links */
+.header-nav a,
+.header-nav button {
+  background: transparent;
+  color: #D4AF37;                 /* Gold accent */
+}
+.header-nav a:hover,
+.header-nav button:hover {
+  color: #F8F8F8;
+  border-bottom: 2px solid #D4AF37;
+}
+/* ─── Premium charcoal header + orange title ─── */
+.header{
+  background:#1c1c1c !important;        /* deep charcoal */
+}
+
+.header-logo{
+  background:none;                      /* cancel any previous gradient */
+  color:#FFA500;                        /* rich orange font */
+  text-shadow:0 1px 3px rgba(0,0,0,.35);/* subtle depth on dark bg */
+}
+
+
+  
+  
